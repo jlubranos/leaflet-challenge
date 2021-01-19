@@ -25,16 +25,17 @@ function createLegend(myMap) {
   var legend = L.control({position: 'bottomright'});
 
   legend.onAdd = function (myMap) {
-    var div = L.DomUtil.create('div', 'info legend'),
-    depth = [.10, 10, 30, 50, 70, 90],
-    labels = [];
+    var div = L.DomUtil.create('div', 'legend'),
+    depth = [".10", "10", "30", "50", "70", "90"],
+    labels=["<strong>EQ Depths</strong>"];
 
     // loop through our density intervals and generate a label with a colored square for each interval
     for (var i = 0; i < depth.length; i++) {
-      div.innerHTML +=
-        '<i style="background:' + getColor(depth[i])  + '"></i> ' +
-          depth[i] + (depth[i + 1] ? '&ndash;' + depth[i + 1] + '<br>' : '+');
+      labels.push(
+        '<i style="background:' + getColor(parseFloat(depth[i])) + '"></i> ' + "<span>" + depth[i] + (depth[i+1] ? '&ndash;' + depth[i+1] : '+') + "</span>"
+      );
     }
+    div.innerHTML=labels.join("<br>");
     return div;
   };
   legend.addTo(myMap);
@@ -91,7 +92,7 @@ function createMarkers(response)  {
       color: color,
       fillColor: color,
       radius: magnitude*5000
-    }).bindPopup("<h3>" + place + "<h3><h3>Magnitude: " + magnitude);
+    }).bindPopup(`<h3>${place}<hr>Magnitude: ${magnitude}<br>Depth: ${depth}`);
 
     earthquakeMarkers.push(earthquakeMarker);
   }
