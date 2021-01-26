@@ -1,0 +1,331 @@
+{
+    "type": "FeatureCollection",
+    "metadata": {
+        "generated": 1611014503000,
+        "url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson",
+        "title": "USGS All Earthquakes, Past Week",
+        "status": 200,
+        "api": "1.10.3",
+        "count": 2043
+    },
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 2,
+                "place": "16 km W of Happy Valley, Alaska",
+                "time": 1611012657325,
+                "updated": 1611012918155,
+                "tz": null,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ak021u5jroy",
+                "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/ak021u5jroy.geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "automatic",
+                "tsunami": 0,
+                "sig": 62,
+                "net": "ak",
+                "code": "021u5jroy",
+                "ids": ",ak021u5jroy,",
+                "sources": ",ak,",
+                "types": ",origin,",
+                "nst": null,
+                "dmin": null,
+                "rms": 0.61,
+                "gap": null,
+                "magType": "ml",
+                "type": "earthquake",
+                "title": "M 2.0 - 16 km W of Happy Valley, Alaska"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -152.0156,
+                    59.9221,
+                    71.1
+                ]
+            },
+            "id": "ak021u5jroy"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 1.6,
+                "place": "8 km NNE of Hawthorne, Nevada",
+                "time": 1611012618910,
+                "updated": 1611012825824,
+                "tz": null,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nn00798009",
+                "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/nn00798009.geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "automatic",
+                "tsunami": 0,
+                "sig": 39,
+                "net": "nn",
+                "code": "00798009",
+                "ids": ",nn00798009,",
+                "sources": ",nn,",
+                "types": ",origin,phase-data,",
+                "nst": 18,
+                "dmin": 0.071,
+                "rms": 0.11,
+                "gap": 95.03,
+                "magType": "ml",
+                "type": "earthquake",
+                "title": "M 1.6 - 8 km NNE of Hawthorne, Nevada"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -118.6017,
+                    38.5968,
+                    6
+                ]
+            },
+            "id": "nn00798009"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 2.2,
+                "place": "63 km N of Petersville, Alaska",
+                "time": 1611012235459,
+                "updated": 1611012817688,
+                "tz": null,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ak021u5i9lo",
+                "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/ak021u5i9lo.geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "automatic",
+                "tsunami": 0,
+                "sig": 74,
+                "net": "ak",
+                "code": "021u5i9lo",
+                "ids": ",ak021u5i9lo,",
+                "sources": ",ak,",
+                "types": ",origin,",
+                "nst": null,
+                "dmin": null,
+                "rms": 0.29,
+                "gap": null,
+                "magType": "ml",
+                "type": "earthquake",
+                "title": "M 2.2 - 63 km N of Petersville, Alaska"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -150.9357,
+                    63.0595,
+                    128.8
+                ]
+            },
+            "id": "ak021u5i9lo"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 1.72,
+                "place": "8km WSW of Atascadero, CA",
+                "time": 1611012116480,
+                "updated": 1611012606942,
+                "tz": null,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc73513100",
+                "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/nc73513100.geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "automatic",
+                "tsunami": 0,
+                "sig": 46,
+                "net": "nc",
+                "code": "73513100",
+                "ids": ",nc73513100,",
+                "sources": ",nc,",
+                "types": ",nearby-cities,origin,phase-data,scitech-link,",
+                "nst": 15,
+                "dmin": 0.08538,
+                "rms": 0.06,
+                "gap": 126,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 1.7 - 8km WSW of Atascadero, CA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -120.7511673,
+                    35.4703331,
+                    4.59
+                ]
+            },
+            "id": "nc73513100"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 2.1,
+                "place": "32 km SE of Mina, Nevada",
+                "time": 1611012007600,
+                "updated": 1611012687314,
+                "tz": null,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nn00798006",
+                "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/nn00798006.geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "automatic",
+                "tsunami": 0,
+                "sig": 68,
+                "net": "nn",
+                "code": "00798006",
+                "ids": ",nn00798006,",
+                "sources": ",nn,",
+                "types": ",origin,phase-data,",
+                "nst": 22,
+                "dmin": 0.018,
+                "rms": 0.13,
+                "gap": 68.09,
+                "magType": "ml",
+                "type": "earthquake",
+                "title": "M 2.1 - 32 km SE of Mina, Nevada"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -117.8963,
+                    38.1535,
+                    11.1
+                ]
+            },
+            "id": "nn00798006"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 3.41,
+                "place": "66 km N of Cruz Bay, U.S. Virgin Islands",
+                "time": 1611011452400,
+                "updated": 1611012770760,
+                "tz": null,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/pr2021018013",
+                "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/pr2021018013.geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "reviewed",
+                "tsunami": 0,
+                "sig": 179,
+                "net": "pr",
+                "code": "2021018013",
+                "ids": ",pr2021018013,",
+                "sources": ",pr,",
+                "types": ",origin,phase-data,",
+                "nst": 8,
+                "dmin": 1.1217,
+                "rms": 0.3,
+                "gap": 328,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 3.4 - 66 km N of Cruz Bay, U.S. Virgin Islands"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -64.803,
+                    18.9318,
+                    54
+                ]
+            },
+            "id": "pr2021018013"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 4.4,
+                "place": "81 km ESE of Salamanca, Chile",
+                "time": 1611010624486,
+                "updated": 1611012404228,
+                "tz": null,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000d17v",
+                "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us7000d17v.geojson",
+                "felt": 1,
+                "cdi": 2.7,
+                "mmi": null,
+                "alert": null,
+                "status": "reviewed",
+                "tsunami": 0,
+                "sig": 298,
+                "net": "us",
+                "code": "7000d17v",
+                "ids": ",us7000d17v,",
+                "sources": ",us,",
+                "types": ",dyfi,origin,phase-data,",
+                "nst": null,
+                "dmin": 0.723,
+                "rms": 1.16,
+                "gap": 71,
+                "magType": "mb",
+                "type": "earthquake",
+                "title": "M 4.4 - 81 km ESE of Salamanca, Chile"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -70.1291,
+                    -31.9589,
+                    118.05
+                ]
+            },
+            "id": "us7000d17v"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 3,
+                "place": "4 km SSE of Maria Antonia, Puerto Rico",
+                "time": 1611010567100,
+                "updated": 1611011954040,
+                "tz": null,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/pr2021018012",
+                "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/pr2021018012.geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "reviewed",
+                "tsunami": 0,
+                "sig": 138,
+                "net": "pr",
+                "code": "2021018012",
+                "ids": ",us7000d17q,pr2021018012,",
+                "sources": ",us,pr,",
+                "types": ",origin,phase-data,",
+                "nst": 24,
+                "dmin": 0.031,
+                "rms": 0.2,
+                "gap": 199,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 3.0 - 4 km SSE of Maria Antonia, Puerto Rico"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.8726,
+                    17.9448,
+                    15
+                ]
+            },
+            "id": "pr2021018012"
+        },
