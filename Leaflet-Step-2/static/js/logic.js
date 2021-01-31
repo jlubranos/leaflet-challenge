@@ -97,7 +97,7 @@ function getColor(depth) {
     var myMap = L.map("mapid", {
       center: [30.00, -40.00],
       zoom: 3,
-      layers: [satmap, earthquakes, techplates]
+      layers: [satmap, techplates, earthquakes]
     });
 
     L.control.layers(baseMaps, overlayMaps, {
