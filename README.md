@@ -1,4 +1,4 @@
-![Advanced](images/Advanced.png)
+![Advanced](Leaflet-Step-1/images/Advanced.png)
 
 # __Leaflet Homework__
 # USGS - United States Geological Survey.
@@ -7,7 +7,7 @@
 
 * "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson"
 
-## This application uses leaflet as well to display the techtonic plates located in the earth's crust, the data is provided
+## This application uses leaflet as well to display the techtonic plates located in the earth's crust, the data is provided by:
 
 * "https://raw.githubusercontent.com/fraxen/tectonicplates/master/GeoJSON/PB2002_plates.json";
 
