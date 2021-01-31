@@ -1,3 +1,5 @@
+
+// Determines color of circle based on depth....
 function getColor(depth) {
 
     if (depth<10) {
@@ -20,6 +22,7 @@ function getColor(depth) {
     }
   }
   
+  // Creates legend for map
   function createLegend(myMap) {
   
     var legend = L.control({position: 'bottomright'});
@@ -43,7 +46,7 @@ function getColor(depth) {
   
   function createMap(earthquakes,tplates) {
     
-    var lightmap = L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
+    var satmap = L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
       attribution: "© <a href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>",
       tileSize: 512,
       maxZoom: 18,
@@ -51,20 +54,50 @@ function getColor(depth) {
       id:"mapbox/satellite-streets-v11",
       accessToken: API_KEY
     });
+
+    var lightmap = L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
+      attribution: "© <a href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>",
+      tileSize: 512,
+      maxZoom: 18,
+      zoomOffset: -1,
+      id:"mapbox/light-v10",
+      accessToken: API_KEY
+    });
+
+    var outdoormap = L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
+      attribution: "© <a href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>",
+      tileSize: 512,
+      maxZoom: 18,
+      zoomOffset: -1,
+      id:"mapbox/outdoors-v10",
+      accessToken: API_KEY
+    });
+
+    var myStyle = {
+      "fillColor":"transparent",
+      "color":"#ff0000",
+      "weight":2,
+      "opacity":1
+    };
+
+    var techplates = L.geoJSON(tplates, {style:myStyle});
+
   
     var baseMaps = {
-      "Light Map": lightmap
+      "Satellite": satmap,
+      "GrayScale": lightmap,
+      "Out Doors": outdoormap
     };
   
     var overlayMaps = {
       "Earthquakes": earthquakes,
-      "Techtonic :": tplates
+      "Techtonic :": techplates
     };
   
     var myMap = L.map("mapid", {
-      center: [50.09, -95.71],
+      center: [30.00, -40.00],
       zoom: 3,
-      layers: [lightmap, earthquakes, tplates]
+      layers: [satmap, earthquakes, techplates]
     });
 
     L.control.layers(baseMaps, overlayMaps, {
@@ -76,9 +109,7 @@ function getColor(depth) {
     
   function createMarkers(eqdata, tplates)  {
     var locations=eqdata.features;
-    var tpoints=tplates.features;
     var earthquakeMarkers=[];
-    var tpointlocations=[];
   
     for (var index = 0; index<locations.length;index++) {
       var location=locations[index];
@@ -98,18 +129,7 @@ function getColor(depth) {
       }).bindPopup(`<h3>${place}<hr>Magnitude: ${magnitude}<br>Depth: ${depth}`);
       earthquakeMarkers.push(earthquakeMarker);
     }
-
-    for (var index = 0; index<tpoints.length; index++) {
-      var points=tpoints[index].geometry.coordinates[0];
-      var polygon=L.polygon(points, {
-        color: "yellow",
-        fillColor: "Transparent",
-        fillOpacity: 0
-      });
-      tpointlocations.push(polygon);
-    }
-    console.log("tpoint :",tpointlocations);
-    createMap(L.layerGroup(earthquakeMarkers),L.layerGroup(tpointlocations));
+    createMap(L.layerGroup(earthquakeMarkers),tplates);
   }
     
 
@@ -118,12 +138,6 @@ var geoData="https://raw.githubusercontent.com/fraxen/tectonicplates/master/GeoJ
 
 d3.json(eqdata, function(eqdata) {
     d3.json(geoData, function(tplates) {
-        console.log(tplates);
-        console.log("Feature :",tplates.features[0].geometry.coordinates[0])
-        console.log("Feature :",tplates.features[1].geometry.coordinates[0])
-        console.log("Feature :",tplates.features[0].geometry.coordinates[0][1])
-        console.log("Feature :",tplates.features[0].geometry.coordinates[0][1][0])
-        console.log("Feature :",tplates.features[0].geometry.coordinates[0][1][1])
         createMarkers(eqdata, tplates);
     });
 });

@@ -61,7 +61,7 @@ function createMap(earthquakes) {
   };
 
   var myMap = L.map("mapid", {
-    center: [50.09, -95.71],
+    center: [30.00, -40.00],
     zoom: 3,
     layers: [lightmap, earthquakes]
   });
