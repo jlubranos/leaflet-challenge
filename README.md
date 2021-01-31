@@ -1,4 +1,4 @@
-![Advanced](Leaflet-Step-1/images/Advanced.png)
+![Advanced](Leaflet-Step-1/Images/5-Advanced.png)
 
 # __Leaflet Homework__
 # USGS - United States Geological Survey.
