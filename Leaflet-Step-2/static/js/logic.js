@@ -43,7 +43,9 @@ function getColor(depth) {
     };
     legend.addTo(myMap);
   }
-  
+
+
+  // Creates basemaps as well as the overlayers for both earthquake markers and techonic plates.
   function createMap(earthquakes,tplates) {
     
     var satmap = L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
@@ -80,6 +82,7 @@ function getColor(depth) {
       "opacity":1
     };
 
+    // geoJSON object for techtonic plates.
     var techplates = L.geoJSON(tplates, {style:myStyle});
 
   
@@ -94,6 +97,8 @@ function getColor(depth) {
       "Techtonic :": techplates
     };
   
+    //Earthquake markers put overtop of the techtonic plates so that Popups will be display if
+    //  pointed to and clicked on.
     var myMap = L.map("mapid", {
       center: [30.00, -40.00],
       zoom: 3,
@@ -107,6 +112,7 @@ function getColor(depth) {
     createLegend(myMap);
   }
     
+  // creates earthquake markers list and popups and passes them to createMap as well as the techtonic geoJson object.
   function createMarkers(eqdata, tplates)  {
     var locations=eqdata.features;
     var earthquakeMarkers=[];
@@ -132,10 +138,14 @@ function getColor(depth) {
     createMap(L.layerGroup(earthquakeMarkers),tplates);
   }
     
-
+// Earthquake geojson
 var eqdata="https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson"
+
+// Techtonic plate geojson
 var geoData="https://raw.githubusercontent.com/fraxen/tectonicplates/master/GeoJSON/PB2002_plates.json";
 
+
+// Read both geojson's and pass them to createMarkers...
 d3.json(eqdata, function(eqdata) {
     d3.json(geoData, function(tplates) {
         createMarkers(eqdata, tplates);
