@@ -15,5 +15,5 @@
 
 * Clone the repository on to your local machine.
 * Load the leaflet challenge folder into Visual Studio Code.
-* Select desired index.html either in Leaflet1 or Leaflet2 folder.
+* Select desired index.html either in Leaflet-Step-1 or Leaflet-Step-2 folder.
 * Run it through live inside your Visual Studio Code, which will run the application  locally on your machine.
